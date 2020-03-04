@@ -46,7 +46,7 @@ func dataSourceDnsSRVRecordSet() *schema.Resource {
 }
 
 func dataSourceDnsSRVRecordSetRead(d *schema.ResourceData, meta interface{}) error {
-	var retry = 60
+	var retry = 300
 	service := d.Get("service").(string)
 
 Retry:
